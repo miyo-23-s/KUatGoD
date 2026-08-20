@@ -225,23 +225,130 @@ body {
 }
 
 .header-subtitle {
-    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color: #a8873b;
+    margin: 0 0 14px;
+
+    color: #8f7130;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.35em;
+    font-weight: 400;
+
+    letter-spacing: 0.3em;
+
+    white-space: nowrap;
+}
+
+
+/* 英字タイトルの左右に伸びる銀のライン */
+
+.header-subtitle::before,
+.header-subtitle::after {
+    content: "";
+
+    width: 90px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c5c5c5
+        );
+}
+
+
+/* 左側 */
+
+.header-subtitle::before {
+    margin-right: 18px;
+}
+
+
+/* 右側 */
+
+.header-subtitle::after {
+    margin-left: 18px;
+
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #c5c5c5
+        );
 }
 
 .site-header h1 {
+    display: inline-block;
+
+    position: relative;
+
     margin: 0;
+
+    padding: 0 35px 18px;
 
     color: #222;
 
     font-size: 32px;
     font-weight: 500;
+
     letter-spacing: 0.15em;
+}
+
+
+/* タイトル下の装飾線 */
+
+.site-header h1::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 100px;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #a8873b 25%,
+            #d8c58f 50%,
+            #a8873b 75%,
+            transparent
+        );
+}
+
+.site-header h1::before {
+    content: "✦";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -9px;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    padding: 0 8px;
+
+    background: #f8f8f8;
+
+    color: #a8873b;
+
+    font-size: 12px;
+    line-height: 18px;
 }
 
 
@@ -901,9 +1008,25 @@ body {
         padding: 55px 20px 50px;
     }
 
-    .site-header h1 {
-        font-size: 24px;
-    }
+.site-header h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 24px;
+}
+
+.header-subtitle::before,
+.header-subtitle::after {
+    width: 40px;
+}
+
+.header-subtitle::before {
+    margin-right: 10px;
+}
+
+.header-subtitle::after {
+    margin-left: 10px;
+}
 
     .main-content {
         width: calc(100% - 24px);

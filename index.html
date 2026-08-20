@@ -581,9 +581,15 @@ body {
 .character-table table {
     width: 100%;
 
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 
     font-size: 14px;
+
+    border: 1px solid #c5c5c5;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .character-table th,
@@ -595,18 +601,57 @@ body {
     text-align: left;
 }
 
+.character-table tr:last-child th,
+.character-table tr:last-child td {
+    border-bottom: none;
+}
+
 .character-table th {
+    position: relative;
+
     width: 28%;
 
-    background: #f2f2f2;
+    background:
+        linear-gradient(
+            to right,
+            #e4e4e4,
+            #f4f4f4
+        );
 
     color: #555;
 
     font-weight: 600;
+
+    border-right: 1px solid #d0d0d0;
+}
+
+.character-table th::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #d8c58f,
+            #a8873b,
+            #d8c58f
+        );
 }
 
 .character-table td {
-    background: #ffffff;
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff,
+            #fafafa
+        );
 
     color: #222;
 }

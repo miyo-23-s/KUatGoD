@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Character Data</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+    <!-- =========================
+         Header
+    ========================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="header-subtitle">CHARACTER DATA</p>
+            <h1>キャラクターデータ</h1>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         Main
+    ========================== -->
+    <main class="main-content">
+
+
+
+
+
+
+
+      
+
+        <!-- =========================
+             Character 01
+        ========================== -->
+        <details class="character-card" open>
+
+            <summary class="character-header">
+                <span class="character-number">01</span>
+                <span class="character-name">キャラクター名</span>
+            </summary>
+
+
+            <div class="character-content">
+
+                <!-- 基本データ -->
+                <section class="character-introduction">
+
+                    <div class="character-table">
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>名前</th>
+                                    <td>キャラクター名</td>
+                                </tr>
+
+                                <tr>
+                                    <th>年齢</th>
+                                    <td>00歳</td>
+                                </tr>
+
+                                <tr>
+                                    <th>性別</th>
+                                    <td>---</td>
+                                </tr>
+
+                                <tr>
+                                    <th>職業</th>
+                                    <td>---</td>
+                                </tr>
+
+                                <tr>
+                                    <th>身長</th>
+                                    <td>000cm</td>
+                                </tr>
+
+                                <tr>
+                                    <th>誕生日</th>
+                                    <td>00月00日</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                    <!-- キャラクター画像 -->
+                    <div class="character-image">
+                        <img src="images/character01.png" alt="キャラクター名">
+                    </div>
+
+                </section>
+
+
+                <!-- プロフィール -->
+                <section class="profile-section">
+
+                    <h2>PROFILE</h2>
+
+                    <div class="profile-line"></div>
+
+                    <div class="profile-text">
+
+                        <p>
+                            ここにキャラクターのプロフィールを記述します。
+                            長めの文章にも対応できるようになっています。
+                        </p>
+
+                        <p>
+                            キャラクターの生い立ちや性格、現在の状況など、
+                            必要に応じて自由に文章を追加してください。
+                        </p>
+
+                        <p>
+                            改行したい場合は、このように段落を分けることもできます。
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- 詳細情報 -->
+                <section class="detail-section">
+
+                    <h2>DETAIL</h2>
+
+                    <div class="profile-line"></div>
+
+                    <div class="detail-text">
+
+                        <p>
+                            その他の詳細情報をここに記述できます。
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </details>
+
+
+    </main>
+
+
+    <!-- =========================
+         Back to Top
+    ========================== -->
+    <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">
+        ↑
+        <span>TOP</span>
+    </a>
+
+
+</body>
+</html>
+
+
+
+
+
+<!-----------------------------ここからスタイル---------------------------------->
+
+<style>
+
+/* ========================================
+   Base
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #f5f5f5;
+    color: #222;
+
+    font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        sans-serif;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.site-header {
+    padding: 80px 20px 70px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #f8f8f8 75%,
+            #eeeeee 100%
+        );
+
+    border-bottom: 1px solid #c8c8c8;
+
+    text-align: center;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header-subtitle {
+    margin: 0 0 8px;
+
+    color: #a8873b;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+}
+
+.site-header h1 {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+}
+
+
+/* ========================================
+   Main
+======================================== */
+
+.main-content {
+    width: min(1100px, calc(100% - 40px));
+    margin: 50px auto 100px;
+}
+
+
+/* ========================================
+   Character Card
+======================================== */
+
+.character-card {
+    margin-bottom: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #cfcfcf;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   Character Header
+======================================== */
+
+.character-header {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 22px 30px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    background:
+        linear-gradient(
+            to right,
+            #ffffff,
+            #f4f4f4
+        );
+
+    border-left: 4px solid #b4944a;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* Chrome / Safari */
+.character-header::-webkit-details-marker {
+    display: none;
+}
+
+.character-header:hover {
+    background: #f0f0f0;
+}
+
+
+/* 開閉アイコン */
+
+.character-header::after {
+    content: "＋";
+
+    margin-left: auto;
+
+    color: #a8873b;
+
+    font-size: 22px;
+    font-weight: 300;
+
+    transition: transform 0.25s ease;
+}
+
+.character-card[open] .character-header::after {
+    content: "−";
+}
+
+
+/* Character Number */
+
+.character-number {
+    display: inline-block;
+
+    margin-right: 20px;
+
+    color: #a8873b;
+
+    font-size: 12px;
+    letter-spacing: 0.15em;
+}
+
+
+/* Character Name */
+
+.character-name {
+    color: #222;
+
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   Character Content
+======================================== */
+
+.character-content {
+    padding: 45px 45px 55px;
+
+    border-top: 1px solid #dedede;
+}
+
+
+/* ========================================
+   Introduction
+======================================== */
+
+.character-introduction {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 280px;
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   Table
+======================================== */
+
+.character-table {
+    width: 100%;
+}
+
+.character-table table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+.character-table th,
+.character-table td {
+    padding: 13px 16px;
+
+    border-bottom: 1px solid #d5d5d5;
+
+    text-align: left;
+}
+
+.character-table th {
+    width: 28%;
+
+    background: #f2f2f2;
+
+    color: #555;
+
+    font-weight: 600;
+}
+
+.character-table td {
+    background: #ffffff;
+
+    color: #222;
+}
+
+
+/* ========================================
+   Character Image
+======================================== */
+
+.character-image {
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    border: 1px solid #cfcfcf;
+}
+
+.character-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   Profile / Detail
+======================================== */
+
+.profile-section,
+.detail-section {
+    margin-top: 55px;
+}
+
+.profile-section h2,
+.detail-section h2 {
+    margin: 0;
+
+    color: #333;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* Gold line */
+
+.profile-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 10px 0 28px;
+
+    background:
+        linear-gradient(
+            to right,
+            #b4944a 0%,
+            #d8c58f 15%,
+            #dedede 50%,
+            #eeeeee 100%
+        );
+}
+
+
+/* ========================================
+   Long Text
+======================================== */
+
+.profile-text,
+.detail-text {
+    color: #333;
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+.profile-text p,
+.detail-text p {
+    margin: 0 0 1.5em;
+}
+
+.profile-text p:last-child,
+.detail-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   Back To Top
+======================================== */
+
+.back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #222;
+
+    color: #ffffff;
+
+    border: 1px solid #a8873b;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: #a8873b;
+
+    transform: translateY(-3px);
+}
+
+.back-to-top span {
+    margin-top: -3px;
+
+    font-size: 8px;
+    letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media screen and (max-width: 700px) {
+
+    .site-header {
+        padding: 55px 20px 50px;
+    }
+
+    .site-header h1 {
+        font-size: 24px;
+    }
+
+    .main-content {
+        width: calc(100% - 24px);
+
+        margin-top: 25px;
+    }
+
+    .character-header {
+        padding: 18px 18px;
+    }
+
+    .character-name {
+        font-size: 16px;
+    }
+
+    .character-content {
+        padding: 25px 18px 40px;
+    }
+
+    .character-introduction {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .character-image {
+        width: min(280px, 100%);
+
+        margin: 0 auto;
+    }
+
+    .character-table th,
+    .character-table td {
+        padding: 10px 11px;
+
+        font-size: 13px;
+    }
+
+    .character-table th {
+        width: 32%;
+    }
+
+    .profile-section,
+    .detail-section {
+        margin-top: 40px;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+</style>

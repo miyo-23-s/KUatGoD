@@ -41,6 +41,9 @@
         ========================== -->
         <details class="character-card" open>
 
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+
             <summary class="character-header">
                 <span class="character-number">01</span>
                 <span class="character-name">キャラクター名</span>
@@ -257,6 +260,8 @@ body {
 ======================================== */
 
 .character-card {
+    position: relative;
+
     margin-bottom: 40px;
 
     background: #ffffff;
@@ -266,6 +271,82 @@ body {
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.05);
 }
+
+
+/* ========================================
+   Knight Corner Decorations
+======================================== */
+
+.character-card::before,
+.character-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* 左上 */
+
+.character-card::before {
+    top: -1px;
+    left: -1px;
+
+    border-top: 2px solid #a8873b;
+    border-left: 2px solid #a8873b;
+}
+
+
+/* 右下 */
+
+.character-card::after {
+    right: -1px;
+    bottom: -1px;
+
+    border-right: 2px solid #a8873b;
+    border-bottom: 2px solid #a8873b;
+}
+
+
+.corner-decoration {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* 右上 */
+
+.corner-decoration.top-right {
+    top: -1px;
+    right: -1px;
+
+    border-top: 2px solid #a8873b;
+    border-right: 2px solid #a8873b;
+}
+
+
+/* 左下 */
+
+.corner-decoration.bottom-left {
+    bottom: -1px;
+    left: -1px;
+
+    border-left: 2px solid #a8873b;
+    border-bottom: 2px solid #a8873b;
+}
+    
 
 
 /* ========================================

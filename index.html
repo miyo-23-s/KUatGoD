@@ -983,17 +983,44 @@ body {
     color: #333;
 
     font-size: 14px;
-    line-height: 2;
+    line-height: 2.15;
+
+    letter-spacing: 0.025em;
+
+    position: relative;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #eeeeee;
 }
 
 .profile-text p,
 .detail-text p {
-    margin: 0 0 1.5em;
+    margin: 0 0 1.8em;
 }
 
 .profile-text p:last-child,
 .detail-text p:last-child {
     margin-bottom: 0;
+}
+
+.profile-text p:first-child::first-letter {
+    float: left;
+
+    margin-top: 5px;
+    margin-right: 6px;
+
+    color: #8f7130;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+    line-height: 0.85;
 }
 
 
@@ -1111,20 +1138,20 @@ body {
     padding-right: 20px;
 
     font-size: 24px;
-}
+    }
 
-.header-subtitle::before,
-.header-subtitle::after {
+    .header-subtitle::before,
+    .header-subtitle::after {
     width: 40px;
-}
+    }
 
-.header-subtitle::before {
-    margin-right: 10px;
-}
+    .header-subtitle::before {
+        margin-right: 10px;
+    }
 
-.header-subtitle::after {
-    margin-left: 10px;
-}
+    .header-subtitle::after {
+        margin-left: 10px;
+    }
 
     .main-content {
         width: calc(100% - 24px);
@@ -1209,6 +1236,17 @@ body {
     .profile-section h2::after,
     .detail-section h2::after {
         margin-left: 12px;
+    }
+
+    .profile-text {
+    padding-left: 12px;
+    padding-right: 12px;
+    }
+
+    .profile-text p:first-child::first-letter {
+        font-size: 29px;
+
+        margin-right: 5px;
     }
 
 }

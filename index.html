@@ -45,7 +45,7 @@
         <!-- =========================
              Character 01
         ========================== -->
-        <details class="character-card" open>
+        <details class="character-card" id="character-01" open>
 
             <div class="corner-decoration top-right"></div>
             <div class="corner-decoration bottom-left"></div>
@@ -193,7 +193,37 @@
     </a>
 
 
-</body>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const targetId = window.location.hash;
+
+    if (!targetId) return;
+
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    if (target.classList.contains("character-card")) {
+        target.open = true;
+
+        setTimeout(() => {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 100);
+    }
+
+});
+</script>
+
+
+    
+</body>    
 </html>
 
 

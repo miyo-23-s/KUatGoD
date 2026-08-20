@@ -72,11 +72,6 @@
                                 </tr>
 
                                 <tr>
-                                    <th>職業</th>
-                                    <td>---</td>
-                                </tr>
-
-                                <tr>
                                     <th>身長</th>
                                     <td>000cm</td>
                                 </tr>
@@ -93,7 +88,7 @@
 
                     <!-- キャラクター画像 -->
                     <div class="character-image">
-                        <img src="images/character01.png" alt="キャラクター名">
+                        <img src="images/character01.avif" alt="キャラクター名">
                     </div>
 
                 </section>
@@ -289,18 +284,24 @@ body {
 
     list-style: none;
 
+    /* 銀のプレートをイメージ */
     background:
         linear-gradient(
-            to right,
-            #ffffff,
-            #f4f4f4
+            to bottom,
+            #ffffff 0%,
+            #f7f7f7 45%,
+            #e8e8e8 50%,
+            #f8f8f8 55%,
+            #ffffff 100%
         );
 
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #c8c8c8;
     border-left: 4px solid #b4944a;
 
     transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+        background 0.25s ease,
+        border-color 0.25s ease;
 }
 
 
@@ -309,8 +310,54 @@ body {
     display: none;
 }
 
+
+/* マウスを乗せたとき */
+
 .character-header:hover {
-    background: #f0f0f0;
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #f1f1f1 50%,
+            #fafafa 100%
+        );
+}
+
+
+/* 開いている状態 */
+
+.character-card[open] .character-header {
+    border-left-color: #8f7130;
+
+    box-shadow:
+        inset 0 -1px 0 #e2d3a8;
+}
+
+
+/* 上部の細い装飾線 */
+
+.character-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+    right: 30px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #d4c38e 20%,
+            #b4944a 50%,
+            #d4c38e 80%,
+            transparent
+        );
+
+    opacity: 0.65;
 }
 
 
@@ -321,30 +368,81 @@ body {
 
     margin-left: auto;
 
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: #a8873b;
 
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
 
-    transition: transform 0.25s ease;
+    border: 1px solid #c9b47a;
+
+    background: #fafafa;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
+
 
 .character-card[open] .character-header::after {
     content: "−";
+
+    color: #ffffff;
+
+    background: #a8873b;
 }
 
 
 /* Character Number */
 
 .character-number {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin-right: 20px;
+    position: relative;
 
-    color: #a8873b;
+    width: 34px;
+    height: 34px;
+
+    margin-right: 18px;
+
+    color: #8f7130;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 12px;
-    letter-spacing: 0.15em;
+
+    letter-spacing: 0.08em;
+
+    /* 小さな盾・紋章をイメージ */
+    border: 1px solid #b4944a;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ededed
+        );
+
+    clip-path: polygon(
+        50% 0%,
+        92% 15%,
+        92% 60%,
+        50% 100%,
+        8% 60%,
+        8% 15%
+    );
 }
 
 
@@ -355,6 +453,7 @@ body {
 
     font-size: 20px;
     font-weight: 600;
+
     letter-spacing: 0.1em;
 }
 
@@ -591,7 +690,18 @@ body {
     }
 
     .character-header {
-        padding: 18px 18px;
+        padding: 18px;
+    }
+
+    .character-header::before {
+        left: 18px;
+        right: 18px;
+    }
+
+    .character-number {
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
     }
 
     .character-name {

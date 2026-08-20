@@ -264,15 +264,33 @@ body {
 
     margin-bottom: 40px;
 
-    background: #ffffff;
-
-    border: 1px solid #bcbcbc;
-
-    /* 銀の外側に薄い立体感 */
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.05),
-        inset 0 0 0 1px #f8f8f8;
-}
+background:
+    radial-gradient(
+        circle at 50% 42%,
+        transparent 0,
+        transparent 54px,
+        rgba(168, 135, 59, 0.035) 55px,
+        rgba(168, 135, 59, 0.035) 56px,
+        transparent 57px
+    ),
+    linear-gradient(
+        45deg,
+        transparent 49.7%,
+        rgba(168, 135, 59, 0.025) 50%,
+        transparent 50.3%
+    ),
+    linear-gradient(
+        -45deg,
+        transparent 49.7%,
+        rgba(168, 135, 59, 0.025) 50%,
+        transparent 50.3%
+    ),
+    linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #fafafa 50%,
+        #ffffff 100%
+    );
 
 
 /* ========================================

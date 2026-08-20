@@ -151,6 +151,29 @@
 
 
     <!-- =========================
+     Footer
+========================== -->
+<footer class="site-footer">
+
+    <div class="footer-ornament">
+        <span></span>
+        <b>✦</b>
+        <span></span>
+    </div>
+
+    <p class="footer-title">CHARACTER ARCHIVES</p>
+
+    <p class="footer-subtitle">KNIGHTS RECORDS</p>
+
+    <p class="footer-copy">
+        A record of those who bear the knightly oath.
+    </p>
+
+</footer>
+    
+
+
+    <!-- =========================
          Back to Top
     ========================== -->
     <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">
@@ -1118,6 +1141,129 @@ body {
 }
 
 
+
+/* ========================================
+   Footer
+======================================== */
+
+.site-footer {
+    position: relative;
+
+    padding: 55px 20px 65px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #eeeeee 0%,
+            #f7f7f7 20%,
+            #ffffff 100%
+        );
+
+    border-top: 1px solid #c8c8c8;
+
+    text-align: center;
+}
+
+
+/* 上部の装飾 */
+
+.footer-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: min(600px, 80%);
+
+    margin: 0 auto 25px;
+}
+
+.footer-ornament span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c5c5c5
+        );
+}
+
+.footer-ornament span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #c5c5c5
+        );
+}
+
+.footer-ornament b {
+    margin: 0 18px;
+
+    color: #a8873b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+
+    font-weight: normal;
+}
+
+
+/* メインタイトル */
+
+.footer-title {
+    margin: 0;
+
+    color: #333;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    letter-spacing: 0.25em;
+}
+
+
+/* サブタイトル */
+
+.footer-subtitle {
+    margin: 7px 0 0;
+
+    color: #a8873b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+}
+
+
+/* 説明文 */
+
+.footer-copy {
+    margin: 18px 0 0;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 0.05em;
+}
+
+
 /* ========================================
    Responsive
 ======================================== */
@@ -1242,6 +1388,31 @@ body {
         font-size: 29px;
 
         margin-right: 5px;
+    }
+
+    .site-footer {
+    padding: 45px 15px 55px;
+    }
+
+    .footer-ornament {
+        width: 90%;
+    }
+
+    .footer-ornament b {
+        margin: 0 12px;
+    }
+
+    .footer-title {
+        font-size: 14px;
+        letter-spacing: 0.18em;
+    }
+
+    .footer-subtitle {
+        font-size: 9px;
+    }
+
+    .footer-copy {
+        font-size: 9px;
     }
 
 }

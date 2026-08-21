@@ -1149,6 +1149,44 @@ body {
     border-color: #8f7130;
 }
 
+.character-header:hover {
+    background:
+        linear-gradient(
+            to right,
+            #454545,
+            #363636,
+            #414141
+        );
+
+    border-left-color: #b4944a;
+}
+
+.character-card[open] .character-header {
+    background:
+        linear-gradient(
+            to right,
+            #414141 0%,
+            #353535 45%,
+            #3d3d3d 100%
+        );
+
+    border-left-color: #b4944a;
+
+    box-shadow:
+        inset 0 -1px 0 #8f7130,
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.character-card[open] .character-header:hover {
+    background:
+        linear-gradient(
+            to right,
+            #4a4a4a 0%,
+            #3a3a3a 45%,
+            #464646 100%
+        );
+}
+
 
 
 /* ========================================

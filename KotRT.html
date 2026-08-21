@@ -1125,6 +1125,10 @@ body {
     padding: 45px 45px 55px;
 
     border-top: 1px solid #dedede;
+
+    background: #292929;
+
+    border-top-color: #555555;
 }
 
 
@@ -1187,15 +1191,15 @@ body {
     background:
         linear-gradient(
             to right,
-            #e4e4e4,
-            #f4f4f4
+            #3a3a3a,
+            #454545
         );
 
-    color: #555;
+    color: #dddddd;
 
     font-weight: 600;
 
-    border-right: 1px solid #d0d0d0;
+    border-right: 1px solid #666666;
 }
 
 .character-table th::before {
@@ -1222,11 +1226,13 @@ body {
     background:
         linear-gradient(
             to bottom,
-            #ffffff,
-            #fafafa
+            #2d2d2d,
+            #292929
         );
 
-    color: #222;
+    color: #eeeeee;
+
+    border-bottom-color: #505050;
 }
 
 
@@ -1293,7 +1299,7 @@ body {
 
     margin: 0;
 
-    color: #333;
+    color: #eeeeee;
 
     font-family:
         Georgia,
@@ -1363,12 +1369,57 @@ body {
 
 
 /* ========================================
+   Secret Page - Profile Lines
+======================================== */
+
+.profile-section h2::before,
+.profile-section h2::after,
+.detail-section h2::before,
+.detail-section h2::after {
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #666666
+        );
+}
+
+
+/* 左側 */
+
+.profile-section h2::before,
+.detail-section h2::before {
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #666666 70%,
+            #a8873b
+        );
+}
+
+
+/* 右側 */
+
+.profile-section h2::after,
+.detail-section h2::after {
+    background:
+        linear-gradient(
+            to right,
+            #a8873b,
+            #666666 30%,
+            transparent
+        );
+}
+
+
+/* ========================================
    Long Text
 ======================================== */
 
 .profile-text,
 .detail-text {
-    color: #333;
+    color: #dddddd;
 
     font-size: 14px;
     line-height: 2.15;

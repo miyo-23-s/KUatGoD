@@ -466,9 +466,11 @@
 
     <p class="footer-subtitle">Story of Knight</p>
 
-    <p class="footer-copy">
+<p class="footer-copy">
+    <a href="StoN.html" class="footer-secret">
         「If you're kill me, you do it "properly".」
-    </p>
+    </a>
+</p>
 
 </footer>
     
@@ -1388,11 +1390,6 @@ body {
     line-height: 0.85;
 }
 
-
-/* ========================================
-   Back To Top
-======================================== */
-
 /* ========================================
    Back To Top
 ======================================== */
@@ -1603,6 +1600,27 @@ body {
     font-size: 10px;
 
     letter-spacing: 0.05em;
+}
+
+
+/* ========================================
+   Secret Link
+======================================== */
+
+.footer-secret {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.footer-secret:hover {
+    color: #a8873b;
+
+    opacity: 1;
 }
 
 

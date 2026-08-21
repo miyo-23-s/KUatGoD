@@ -558,7 +558,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background: #f5f5f5;
+    background: #202020 !important;
     color: #222;
 
     font-family:
@@ -573,6 +573,8 @@ body {
 .main-content {
     background: #202020;
 }
+
+
 
 
 /* ========================================
@@ -1108,13 +1110,45 @@ body {
 /* Character Name */
 
 .character-name {
-    color: #222;
+    color: #eeeeee;
 
     font-size: 20px;
     font-weight: 600;
 
     letter-spacing: 0.1em;
 }
+
+
+/* ========================================
+   Secret Page - Character Header
+======================================== */
+
+.character-header {
+    background:
+        linear-gradient(
+            to right,
+            #383838,
+            #2d2d2d
+        );
+
+    color: #eeeeee;
+
+    border-left-color: #8f7130;
+}
+
+.character-header::after {
+    background:
+        linear-gradient(
+            135deg,
+            #454545,
+            #292929
+        );
+
+    color: #c2a85d;
+
+    border-color: #8f7130;
+}
+
 
 
 /* ========================================
